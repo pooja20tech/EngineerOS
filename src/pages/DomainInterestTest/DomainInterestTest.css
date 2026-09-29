@@ -1,0 +1,747 @@
+/* =========================================
+   ENGINEEROS DOMAIN INTEREST TEST
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.dit-layout {
+  min-height: 100vh;
+  background: #f6f7ff;
+  color: #172033;
+}
+
+/* =========================================
+   SIDEBAR
+   ========================================= */
+
+.dit-sidebar {
+  position: fixed;
+
+  left: 0;
+  top: 0;
+
+  width: 256px;
+  height: 100vh;
+
+  padding: 26px 16px;
+
+  overflow-y: auto;
+
+  background: #f8f9ff;
+
+  border-right: 1px solid #e2e5f0;
+
+  z-index: 100;
+}
+
+.dit-logo {
+  padding: 0 12px;
+
+  margin-bottom: 35px;
+}
+
+.dit-logo h1 {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+}
+
+.dit-logo div {
+  width: 32px;
+  height: 4px;
+
+  margin-top: 8px;
+
+  border-radius: 999px;
+
+  background: #6d4aff;
+}
+
+.dit-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.dit-nav-link {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  min-height: 46px;
+
+  padding: 10px 12px;
+
+  border-radius: 11px;
+
+  color: #172033;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.dit-nav-link svg {
+  flex-shrink: 0;
+}
+
+.dit-nav-link:hover {
+  background: #6d4aff;
+
+  color: white;
+
+  transform: translateX(2px);
+
+  box-shadow:
+    0 8px 20px rgba(109, 74, 255, 0.18);
+}
+
+.dit-nav-link.active {
+  background: #6d4aff;
+
+  color: white;
+
+  box-shadow:
+    0 8px 20px rgba(109, 74, 255, 0.22);
+}
+
+/* =========================================
+   MAIN
+   ========================================= */
+
+.dit-main {
+  min-height: 100vh;
+
+  margin-left: 256px;
+
+  background: #f6f7ff;
+}
+
+.dit-content {
+  width: 100%;
+  max-width: 1050px;
+
+  margin: 0 auto;
+
+  padding: 35px 45px 60px;
+}
+
+/* =========================================
+   BACK BUTTON
+   ========================================= */
+
+.dit-back {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #667085;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.dit-back:hover {
+  color: #6d4aff;
+
+  transform: translateX(-3px);
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.dit-header {
+  max-width: 780px;
+
+  margin: 42px auto 0;
+
+  text-align: center;
+}
+
+.dit-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 17px;
+
+  color: #6d4aff;
+
+  font-size: 11px;
+  font-weight: 900;
+
+  letter-spacing: 1.4px;
+}
+
+.dit-header h1 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: clamp(38px, 5vw, 62px);
+
+  line-height: 0.98;
+
+  letter-spacing: -3px;
+
+  font-weight: 900;
+}
+
+.dit-header h1 span {
+  display: block;
+
+  width: fit-content;
+
+  margin: 12px auto 0;
+
+  padding: 5px 14px 9px;
+
+  border-radius: 10px;
+
+  background: #6d4aff;
+
+  color: white;
+
+  font-style: italic;
+}
+
+.dit-header p {
+  max-width: 650px;
+
+  margin: 24px auto 0;
+
+  color: #667085;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+/* =========================================
+   PROGRESS
+   ========================================= */
+
+.dit-progress {
+  max-width: 850px;
+
+  margin: 46px auto 25px;
+}
+
+.dit-progress-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 9px;
+
+  color: #667085;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.dit-progress-top strong {
+  color: #6d4aff;
+}
+
+.dit-progress-track {
+  width: 100%;
+
+  height: 7px;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  background: #e5e6ef;
+}
+
+.dit-progress-fill {
+  height: 100%;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    90deg,
+    #6d4aff,
+    #8d72ff
+  );
+
+  transition: width 0.3s ease;
+}
+
+/* =========================================
+   QUESTION CARD
+   ========================================= */
+
+.dit-question-card {
+  display: grid;
+
+  grid-template-columns: 70px 1fr;
+
+  gap: 28px;
+
+  padding: 38px;
+
+  border: 1px solid #e1e5f0;
+
+  border-radius: 24px;
+
+  background: white;
+
+  box-shadow:
+    0 20px 55px rgba(31, 35, 60, 0.07);
+}
+
+.dit-question-number {
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background: #eee9ff;
+
+  color: #6d4aff;
+
+  font-size: 17px;
+
+  font-weight: 900;
+}
+
+.dit-question-content h2 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: clamp(24px, 3vw, 33px);
+
+  line-height: 1.15;
+
+  letter-spacing: -1px;
+}
+
+.dit-question-content > p {
+  margin: 11px 0 27px;
+
+  color: #667085;
+
+  font-size: 14px;
+}
+
+/* =========================================
+   OPTIONS
+   ========================================= */
+
+.dit-options {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.dit-option {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 15px;
+
+  border: 1px solid #dfe3ee;
+
+  border-radius: 13px;
+
+  background: white;
+
+  color: #172033;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.dit-option:hover {
+  border-color: #6d4aff;
+
+  background: #faf9ff;
+
+  transform: translateX(3px);
+}
+
+.dit-option.selected {
+  border-color: #6d4aff;
+
+  background: #eee9ff;
+}
+
+.dit-option-letter {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 1px solid #dfe3ee;
+
+  border-radius: 50%;
+
+  background: white;
+
+  color: #667085;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+.dit-option.selected
+  .dit-option-letter {
+  border-color: #6d4aff;
+
+  background: #6d4aff;
+
+  color: white;
+}
+
+.dit-option-text {
+  flex: 1;
+
+  color: #172033;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+.dit-check {
+  flex-shrink: 0;
+
+  color: #6d4aff;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.dit-footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 17px;
+
+  color: #98a2b3;
+
+  font-size: 12px;
+}
+
+/* =========================================
+   RESULT
+   ========================================= */
+
+.dit-result {
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding: 65px 25px;
+}
+
+.result-sparkle {
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 18px;
+
+  border-radius: 19px;
+
+  background: #6d4aff;
+
+  color: white;
+
+  box-shadow:
+    0 12px 30px rgba(109, 74, 255, 0.25);
+}
+
+.result-eyebrow {
+  display: block;
+
+  color: #6d4aff;
+
+  text-align: center;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.3px;
+}
+
+.dit-result > h1 {
+  margin: 15px 0 0;
+
+  color: #0f172a;
+
+  text-align: center;
+
+  font-size: 32px;
+}
+
+.dit-result > h2 {
+  margin: 7px 0 0;
+
+  color: #6d4aff;
+
+  text-align: center;
+
+  font-size: clamp(35px, 5vw, 55px);
+
+  letter-spacing: -2px;
+}
+
+.result-intro {
+  max-width: 600px;
+
+  margin: 16px auto 38px;
+
+  color: #667085;
+
+  text-align: center;
+
+  line-height: 1.6;
+}
+
+.result-breakdown {
+  padding: 28px;
+
+  border: 1px solid #e1e5f0;
+
+  border-radius: 22px;
+
+  background: white;
+}
+
+.result-breakdown h3 {
+  margin: 0 0 25px;
+
+  color: #0f172a;
+
+  font-size: 18px;
+}
+
+.result-row {
+  margin-bottom: 17px;
+}
+
+.result-row-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 7px;
+
+  color: #172033;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.result-row-top strong {
+  color: #6d4aff;
+}
+
+.result-bar {
+  height: 8px;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  background: #ececf3;
+}
+
+.result-bar div {
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: #6d4aff;
+
+  transition: width 0.5s ease;
+}
+
+.result-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 28px;
+}
+
+.dit-primary-button,
+.dit-secondary-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 13px 19px;
+
+  border-radius: 12px;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.dit-primary-button {
+  border: none;
+
+  background: #6d4aff;
+
+  color: white;
+
+  box-shadow:
+    0 8px 20px rgba(109, 74, 255, 0.2);
+}
+
+.dit-primary-button:hover {
+  background: #5b3de0;
+
+  transform: translateY(-2px);
+}
+
+.dit-secondary-button {
+  border: 1px solid #dfe2eb;
+
+  background: white;
+
+  color: #172033;
+}
+
+.dit-secondary-button:hover {
+  border-color: #6d4aff;
+
+  color: #6d4aff;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+  .dit-sidebar {
+    width: 220px;
+  }
+
+  .dit-main {
+    margin-left: 220px;
+  }
+
+  .dit-content {
+    padding: 30px 25px 50px;
+  }
+}
+
+@media (max-width: 700px) {
+  .dit-sidebar {
+    position: relative;
+
+    width: 100%;
+
+    height: auto;
+  }
+
+  .dit-nav {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .dit-main {
+    margin-left: 0;
+  }
+
+  .dit-content {
+    padding: 25px 18px 45px;
+  }
+
+  .dit-question-card {
+    grid-template-columns: 1fr;
+
+    padding: 25px;
+  }
+
+  .dit-footer {
+    flex-direction: column;
+
+    gap: 7px;
+  }
+
+  .result-buttons {
+    flex-direction: column;
+  }
+}
+

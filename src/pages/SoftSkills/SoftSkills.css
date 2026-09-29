@@ -1,0 +1,601 @@
+/* =========================================================
+   ENGINEEROS — SOFT SKILLS ASSESSMENT
+   Global Application Theme
+   ========================================================= */
+
+.soft-page {
+  min-height: calc(100vh - 20px);
+  padding: 40px;
+  background: #f5f6ff;
+  box-sizing: border-box;
+  color: #172554;
+}
+
+/* =========================================================
+   HERO / INTRO
+   ========================================================= */
+
+.soft-hero,
+.soft-result {
+  max-width: 850px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.soft-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background: #eee9ff;
+  color: #6d4aff;
+}
+
+.soft-label {
+  display: block;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+
+  color: #6d4aff;
+
+  margin-bottom: 8px;
+}
+
+.soft-hero h1,
+.soft-result h1 {
+  margin: 0;
+
+  font-size: 34px;
+  color: #172554;
+}
+
+.soft-hero > p {
+  max-width: 600px;
+
+  margin: 12px auto;
+
+  color: #64748b;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   INFORMATION CARDS
+   ========================================================= */
+
+.soft-info {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 16px;
+
+  margin: 30px 0;
+}
+
+.soft-info div {
+  min-width: 120px;
+
+  padding: 17px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e5f2;
+
+  border-radius: 13px;
+
+  box-shadow: 0 6px 20px rgba(109, 74, 255, 0.04);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.soft-info div:hover {
+  transform: translateY(-2px);
+
+  border-color: #d8cffc;
+
+  box-shadow: 0 10px 25px rgba(109, 74, 255, 0.08);
+}
+
+.soft-info strong,
+.soft-info span {
+  display: block;
+}
+
+.soft-info strong {
+  font-size: 19px;
+
+  color: #172554;
+}
+
+.soft-info span {
+  margin-top: 4px;
+
+  font-size: 10px;
+
+  color: #64748b;
+}
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.soft-primary {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 13px 22px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #6d4aff;
+
+  color: #ffffff;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 20px rgba(109, 74, 255, 0.18);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.soft-primary:hover {
+  background: #5b45d6;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 25px rgba(109, 74, 255, 0.25);
+}
+
+.soft-primary:active {
+  transform: translateY(0);
+}
+
+.soft-note {
+  font-size: 11px !important;
+
+  color: #94a3b8 !important;
+}
+
+/* =========================================================
+   TEST AREA
+   ========================================================= */
+
+.soft-test {
+  max-width: 900px;
+
+  margin: 0 auto;
+}
+
+.soft-test-top span {
+  font-size: 9px;
+
+  font-weight: 800;
+
+  color: #6d4aff;
+
+  letter-spacing: 1px;
+}
+
+.soft-test-top h1 {
+  margin: 5px 0 18px;
+
+  font-size: 22px;
+
+  color: #172554;
+}
+
+/* =========================================================
+   PROGRESS
+   ========================================================= */
+
+.soft-progress {
+  height: 6px;
+
+  margin-bottom: 25px;
+
+  background: #e9e6f7;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.soft-progress div {
+  height: 100%;
+
+  background: #6d4aff;
+
+  transition: width 0.3s ease;
+}
+
+/* =========================================================
+   QUESTION CARD
+   ========================================================= */
+
+.soft-question-card {
+  padding: 32px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e5f2;
+
+  border-radius: 18px;
+
+  box-shadow: 0 10px 30px rgba(23, 37, 84, 0.05);
+}
+
+.soft-question-number {
+  font-size: 10px;
+
+  color: #94a3b8;
+
+  font-weight: 800;
+}
+
+.soft-question-card h2 {
+  margin: 12px 0 25px;
+
+  font-size: 21px;
+
+  line-height: 1.5;
+
+  color: #172554;
+}
+
+/* =========================================================
+   OPTIONS
+   ========================================================= */
+
+.soft-options {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.soft-option {
+  width: 100%;
+
+  padding: 14px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e5f2;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.soft-option:hover {
+  border-color: #6d4aff;
+
+  background: #eee9ff;
+
+  box-shadow: 0 5px 15px rgba(109, 74, 255, 0.08);
+
+  transform: translateY(-1px);
+}
+
+.soft-option.selected {
+  border-color: #6d4aff;
+
+  background: #eee9ff;
+
+  box-shadow: 0 5px 15px rgba(109, 74, 255, 0.08);
+}
+
+.soft-option > span {
+  width: 29px;
+  height: 29px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 1px solid #d8dcea;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  color: #52627a;
+
+  background: #ffffff;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.soft-option.selected > span {
+  background: #6d4aff;
+
+  color: #ffffff;
+
+  border-color: #6d4aff;
+}
+
+.soft-option p {
+  margin: 0;
+
+  color: #334155;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   NAVIGATION BUTTONS
+   ========================================================= */
+
+.soft-navigation {
+  margin-top: 20px;
+
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.soft-secondary {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 11px 17px;
+
+  background: #ffffff;
+
+  color: #52627a;
+
+  border: 1px solid #e3e5f2;
+
+  border-radius: 9px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.soft-secondary:hover:not(:disabled) {
+  background: #eee9ff;
+
+  color: #5b45d6;
+
+  border-color: #d8cffc;
+}
+
+.soft-secondary:disabled {
+  opacity: 0.4;
+
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   RESULTS
+   ========================================================= */
+
+.soft-success {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eee9ff;
+
+  color: #6d4aff;
+}
+
+.soft-overall {
+  max-width: 280px;
+
+  margin: 28px auto;
+
+  padding: 24px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e5f2;
+
+  border-radius: 16px;
+
+  box-shadow: 0 8px 25px rgba(23, 37, 84, 0.04);
+}
+
+.soft-overall span,
+.soft-overall strong {
+  display: block;
+}
+
+.soft-overall span {
+  font-size: 11px;
+
+  color: #64748b;
+}
+
+.soft-overall strong {
+  margin-top: 5px;
+
+  font-size: 40px;
+
+  color: #6d4aff;
+}
+
+/* =========================================================
+   SKILL CARDS
+   ========================================================= */
+
+.soft-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr 1fr;
+
+  gap: 14px;
+
+  margin-bottom: 28px;
+}
+
+.skill-card {
+  padding: 19px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e5f2;
+
+  border-radius: 13px;
+
+  text-align: left;
+
+  box-shadow: 0 6px 20px rgba(23, 37, 84, 0.03);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #d8cffc;
+
+  box-shadow: 0 10px 25px rgba(109, 74, 255, 0.08);
+}
+
+.skill-card span,
+.skill-card strong {
+  display: block;
+}
+
+.skill-card span {
+  font-size: 11px;
+
+  color: #64748b;
+}
+
+.skill-card strong {
+  margin: 5px 0 10px;
+
+  font-size: 24px;
+
+  color: #172554;
+}
+
+/* =========================================================
+   SKILL PROGRESS
+   ========================================================= */
+
+.skill-bar {
+  height: 6px;
+
+  background: #e9e6f7;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.skill-bar div {
+  height: 100%;
+
+  background: #6d4aff;
+
+  border-radius: 10px;
+
+  transition: width 0.3s ease;
+}
+
+/* =========================================================
+   SAVED MESSAGE
+   ========================================================= */
+
+.soft-saved {
+  font-size: 11px;
+
+  color: #22a861;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .soft-page {
+    padding: 20px;
+  }
+
+  .soft-info {
+    flex-wrap: wrap;
+  }
+
+  .soft-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .soft-question-card {
+    padding: 22px;
+  }
+
+  .soft-hero h1,
+  .soft-result h1 {
+    font-size: 28px;
+  }
+}
