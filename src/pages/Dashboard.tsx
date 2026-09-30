@@ -228,7 +228,7 @@ const Dashboard: React.FC = () => {
             icon: Map,
           };
 
-  const NextIcon = nextStep.icon;
+ 
 
   return (
     <div className="dashboard-page">
