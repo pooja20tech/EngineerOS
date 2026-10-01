@@ -56,7 +56,7 @@ export default function Auth() {
 
         // Call FastAPI signup
         const response = await fetch(
-          "http://localhost:8000/auth/signup",
+          "https://engineeros-api.onrender.com/auth/signup",
           {
             method: "POST",
             headers: {
@@ -109,7 +109,7 @@ export default function Auth() {
 
         // Call FastAPI login
         const response = await fetch(
-          "http://localhost:8000/auth/login",
+          "https://engineeros-api.onrender.com/auth/login",
           {
             method: "POST",
             headers: {

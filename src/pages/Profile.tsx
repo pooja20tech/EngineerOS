@@ -14,7 +14,7 @@ import {
   saveStudentData,
 } from "../utils/studentData";
 
-import "./Profile.css";
+import "./profile.css";
 
 interface ProfileFormData {
   name: string;
@@ -100,7 +100,7 @@ const Profile: React.FC = () => {
         */
 
         const response = await fetch(
-          "http://127.0.0.1:8000/students/me",
+          "https://engineeros-api.onrender.com/students/me",
           {
             method: "GET",
             headers: {
@@ -259,7 +259,7 @@ const Profile: React.FC = () => {
       ===================================================== */
 
       const response = await fetch(
-        "http://127.0.0.1:8000/students",
+        "https://engineeros-api.onrender.com/students",
         {
           method: "POST",
 

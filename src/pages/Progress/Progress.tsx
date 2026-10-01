@@ -147,7 +147,7 @@ const Progress: React.FC = () => {
           return;
         }
 
-        const response = await fetch("http://127.0.0.1:8000/students/me", {
+        const response = await fetch("https://engineeros-api.onrender.com/students/me", {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,

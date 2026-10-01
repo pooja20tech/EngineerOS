@@ -79,7 +79,7 @@ const AITutor: React.FC = () => {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/ai-tutor",
+        "https://engineeros-api.onrender.com/ai-tutor",
         {
           method: "POST",
           headers: {
