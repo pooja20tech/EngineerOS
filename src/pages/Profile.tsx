@@ -140,13 +140,11 @@ const Profile: React.FC = () => {
           );
         }
 
-        const student = await response.json();
+       const responseData = await response.json();
 
-        /*
-          Backend profile data
-        */
+const student = responseData?.student || responseData;
 
-        const profile = student?.profile || student;
+const profile = student?.profile || student;
 
         const loadedProfile: ProfileFormData = {
           ...emptyProfile,
