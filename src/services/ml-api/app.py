@@ -835,7 +835,6 @@ def signup(data: dict):
 # ============================================================
 # LOGIN
 # ============================================================
-
 @app.post("/auth/login")
 def login(data: dict):
 
@@ -848,9 +847,17 @@ def login(data: dict):
             detail="Email and password are required"
         )
 
+    # Measure MongoDB lookup
+    start = time.perf_counter()
+
     user = users_collection.find_one({
         "email": email
     })
+
+    print(
+        f"LOGIN DEBUG - MongoDB lookup: "
+        f"{time.perf_counter() - start:.3f}s"
+    )
 
     if not user:
         raise HTTPException(
@@ -858,16 +865,34 @@ def login(data: dict):
             detail="Invalid email or password"
         )
 
-    if not verify_password(
+    # Measure bcrypt verification
+    start = time.perf_counter()
+
+    password_valid = verify_password(
         password,
         user["passwordHash"]
-    ):
+    )
+
+    print(
+        f"LOGIN DEBUG - bcrypt verification: "
+        f"{time.perf_counter() - start:.3f}s"
+    )
+
+    if not password_valid:
         raise HTTPException(
             status_code=401,
             detail="Invalid email or password"
         )
 
+    # Measure JWT creation
+    start = time.perf_counter()
+
     token = create_access_token(email)
+
+    print(
+        f"LOGIN DEBUG - JWT creation: "
+        f"{time.perf_counter() - start:.3f}s"
+    )
 
     return {
         "status": "success",
