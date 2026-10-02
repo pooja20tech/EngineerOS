@@ -10,7 +10,12 @@ MONGODB_URI = os.getenv("MONGODB_URI")
 if not MONGODB_URI:
     raise RuntimeError("MONGODB_URI is not set in .env")
 
-client = MongoClient(MONGODB_URI)
+client = MongoClient(
+    MONGODB_URI,
+    serverSelectionTimeoutMS=5000,
+    connectTimeoutMS=5000,
+    maxPoolSize=50
+)
 
 # Database
 db = client["EngineerOS"]
@@ -18,6 +23,8 @@ db = client["EngineerOS"]
 # Collections
 students_collection = db["students"]
 users_collection = db["users"]
+
+users_collection.create_index("email", unique=True)
 
 
 def test_database_connection():
